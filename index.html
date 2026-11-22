@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ayush | Streezier – Blogger & Future Mentor</title>
+<meta name="description" content="Hi, I’m Ayush, the blogger behind Streezier. I build blogs, grow them with social media traffic, and I’m working towards a coaching program that helps others earn online too.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F6F7FB; --surface:#FFFFFF; --ink:#1B1B3A; --muted:#55557A;
+  --brand:#4338CA; --brand-ink:#FFFFFF; --sun:#FFC53D; --mint:#12B886; --line:#E1E3F0;
+  --head:"Bricolage Grotesque","Trebuchet MS",sans-serif;
+  --body:"DM Sans","Segoe UI",Arial,sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#12122B; --surface:#1B1B3A; --ink:#F2F2FF; --muted:#B4B4D6;
+    --brand:#8B83FF; --brand-ink:#12122B; --line:#2E2E57; color-scheme:dark;
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{font-family:var(--body);background:var(--bg);color:var(--ink);line-height:1.65;font-size:17px;
+  padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--sun);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+
+/* nav */
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:var(--bg);border-bottom:1px solid var(--line)}
+nav{display:flex;align-items:center;justify-content:space-between;height:62px}
+.logo{font-family:var(--head);font-weight:800;font-size:1.35rem;text-decoration:none;letter-spacing:-.02em}
+.logo span{color:var(--brand)}
+nav ul{display:flex;gap:22px;list-style:none}
+nav ul a{text-decoration:none;font-weight:500;color:var(--muted)}
+nav ul a:hover{color:var(--ink)}
+
+/* hero */
+.hero{padding:76px 0 64px}
+.hero h1{font-family:var(--head);font-weight:800;font-size:clamp(2.6rem,8vw,5.6rem);line-height:1;letter-spacing:-.04em;max-width:11ch}
+.hero h1 .hi{display:inline-block;background:var(--sun);color:#1B1B3A;padding:0 .18em;border-radius:.18em;transform:rotate(-2deg)}
+.hero p.lead{margin-top:26px;max-width:46ch;font-size:1.2rem;color:var(--muted)}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.btn{display:inline-block;padding:14px 26px;border-radius:999px;font-weight:700;text-decoration:none;border:2px solid var(--brand);transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn.primary{background:var(--brand);color:var(--brand-ink)}
+.btn.ghost{color:var(--brand)}
+
+/* sections */
+section{padding:64px 0}
+h2{font-family:var(--head);font-weight:800;font-size:clamp(1.8rem,4.5vw,2.8rem);line-height:1.1;letter-spacing:-.03em;margin-bottom:18px}
+.sub{color:var(--muted);max-width:56ch;margin-bottom:36px}
+.about{display:grid;grid-template-columns:1fr 1.4fr;gap:44px;align-items:start}
+.about p+p{margin-top:16px}
+.badge{background:var(--brand);color:var(--brand-ink);border-radius:24px;padding:34px 28px}
+.badge b{display:block;font-family:var(--head);font-size:2.4rem;line-height:1.05;letter-spacing:-.03em}
+.badge span{display:block;margin-top:14px;opacity:.9}
+
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:26px}
+.card h3{font-family:var(--head);font-size:1.25rem;margin-bottom:8px}
+.card p{color:var(--muted);font-size:.98rem}
+
+/* roadmap */
+.road{list-style:none;border-left:3px solid var(--line);margin-left:10px}
+.road li{position:relative;padding:0 0 30px 30px}
+.road li::before{content:"";position:absolute;left:-11px;top:6px;width:19px;height:19px;border-radius:50%;background:var(--bg);border:4px solid var(--brand)}
+.road li.now::before{background:var(--mint);border-color:var(--mint)}
+.road li.next::before{background:var(--sun);border-color:var(--sun)}
+.road h3{font-family:var(--head);font-size:1.2rem}
+.road p{color:var(--muted);max-width:60ch}
+.tag{display:inline-block;margin-left:8px;font-size:.78rem;font-weight:700;padding:2px 10px;border-radius:99px;background:var(--line);vertical-align:middle}
+
+/* coaching */
+.coach{background:var(--ink);color:var(--bg);border-radius:28px;padding:52px 40px;text-align:center}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .coach{background:var(--surface);color:var(--ink);border:1px solid var(--line)}}
+.coach h2{max-width:20ch;margin-inline:auto}
+.coach p{max-width:54ch;margin:0 auto;opacity:.85}
+.coach .btn{background:var(--sun);border-color:var(--sun);color:#1B1B3A}
+
+/* connect */
+.links{display:flex;flex-wrap:wrap;gap:12px}
+.links a{padding:12px 22px;border:2px solid var(--line);border-radius:14px;text-decoration:none;font-weight:700;background:var(--surface)}
+.links a:hover{border-color:var(--brand);color:var(--brand)}
+
+footer{border-top:1px solid var(--line);padding:30px 0;color:var(--muted);font-size:.92rem;text-align:center}
+
+@media (max-width:760px){
+  nav ul{gap:14px;font-size:.95rem}
+  nav ul li:nth-child(1){display:none}
+  .about,.grid{grid-template-columns:1fr}
+  .hero{padding:48px 0 36px}
+  .coach{padding:40px 22px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <nav aria-label="Main">
+      <a class="logo" href="#top">Streezier<span>.</span></a>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#journey">Journey</a></li>
+        <li><a href="#connect">Connect</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap hero">
+    <h1><span class="hi">Hi,</span> I’m Ayush.</h1>
+    <p class="lead">I build blogs under the name <strong>Streezier</strong>, grow them with social media traffic, and one day I’ll teach others how to earn online too.</p>
+    <div class="btns">
+      <a class="btn primary" href="#blog">Read my blog</a>
+      <a class="btn ghost" href="#journey">See where I’m heading</a>
+    </div>
+  </div>
+
+  <section id="about">
+    <div class="wrap about">
+      <div class="badge">
+        <b>Blogger.<br>Builder.<br>Learner.</b>
+        <span>Writing as Streezier</span>
+      </div>
+      <div>
+        <h2>A little about me</h2>
+        <p>My name is Ayush, and I’m a blogger. I publish my work under the name <strong>Streezier</strong>, where I share ideas, experiences and useful content that people can actually read and use.</p>
+        <p>My main goal is simple: build great blogs and bring readers to them from social media. Every post I write, every page I design and every platform I use is part of that one mission.</p>
+        <p>I believe in learning in public. I’m figuring things out step by step, and I’ll share what works and what doesn’t along the way.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="blog">
+    <div class="wrap">
+      <h2>What I do</h2>
+      <p class="sub">Three things keep Streezier moving every single week.</p>
+      <div class="grid">
+        <div class="card">
+          <h3>Create blogs</h3>
+          <p>I research, write and publish blogs that are clear, honest and useful to the reader.</p>
+        </div>
+        <div class="card">
+          <h3>Drive social traffic</h3>
+          <p>I use social media to bring new readers to my blogs and grow an audience that keeps coming back.</p>
+        </div>
+        <div class="card">
+          <h3>Grow every day</h3>
+          <p>I track what works, drop what doesn’t, and keep improving my content, design and reach.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="journey">
+    <div class="wrap">
+      <h2>My journey so far, and what’s next</h2>
+      <p class="sub">I’m not just building a blog. I’m building a path that other people can walk too.</p>
+      <ol class="road">
+        <li class="now">
+          <h3>Building blogs <span class="tag">Now</span></h3>
+          <p>Writing consistently under Streezier and improving every blog I publish.</p>
+        </li>
+        <li class="now">
+          <h3>Bringing traffic from social media <span class="tag">Now</span></h3>
+          <p>Turning followers into readers and readers into a loyal community.</p>
+        </li>
+        <li class="next">
+          <h3>Earning well from my work <span class="tag">Next</span></h3>
+          <p>Turning my blogs into a steady, reliable income.</p>
+        </li>
+        <li class="next">
+          <h3>Launching a coaching program or course <span class="tag">Goal</span></h3>
+          <p>Once I’m earning well, I’ll teach what I’ve learned so that others can build their own income from it as well.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="coach">
+        <h2>Want to earn from blogging too?</h2>
+        <p>My coaching program and course are on the way. Follow along on social media to be the first to know when it opens.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="connect">
+    <div class="wrap">
+      <h2>Let’s connect</h2>
+      <p class="sub">Follow me where I share new posts, updates and behind-the-scenes moments.</p>
+      <div class="links">
+        <a href="https://www.instagram.com/imaiush1" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.youtube.com/@Streezier" target="_blank" rel="noopener">YouTube</a>
+        <a href="mailto:support.streezier@gmail.com">Email me</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">© <span id="yr">2026</span> Ayush · Streezier. All rights reserved.</div>
+</footer>
+
+<script>document.getElementById("yr").textContent=new Date().getFullYear();</script>
+</body>
+</html>
